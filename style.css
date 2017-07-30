@@ -1,203 +1,191 @@
-@import url('https://fonts.googleapis.com/css?family=Lato');
-html{
-    width: 100%;
+
+@import "https://fonts.googleapis.com/css?family=Lato";
+html {
+    color: grey;
     margin: 0;
     padding: 0;
-    color: grey;
+    width: 100%;
 }
-
+.row {
+    padding: 0;
+}
 #outer-dropzone {
     height: 200px;
 }
-
 #inner-dropzone {
     height: 100px;
 }
-
 .dropzone {
     background-color: #ccc;
-    border: dashed 4px transparent;
+    border: 4px dashed transparent;
     border-radius: 4px;
     margin: 10px auto 30px;
     padding: 10px;
+    transition: background-color 0.3s ease 0s;
     width: 80%;
-    transition: background-color 0.3s;
 }
-
 .drop-active {
     border-color: #aaa;
 }
-
 .drop-target {
-    background-color: #29e;
+    background-color: #ccc;
     border-color: #fff;
     border-style: solid;
 }
-
 .drag-drop {
+    background-color: #29e;
+    border: 2px solid #fff;
+    color: #fff;
     display: inline-block;
     min-width: 40px;
     padding: 2em 0.5em;
-    
-    color: #fff;
-    background-color: #29e;
-    border: solid 2px #fff;
-    
-    -webkit-transform: translate(0px, 0px);
     transform: translate(0px, 0px);
-    
-    transition: background-color 0.3s;
+    transition: background-color 0.3s ease 0s;
 }
-
 .drag-drop.can-drop {
-    color: #000;
-    background-color: #4e4;
+    background-color: #ed5a86;
+    border-color: #ed5a86;
+    color: #fff;
 }
-
-
-
-body{
-	width: 100%;
-	height: 100%;
-	background-color: #eae5d2;
-	padding: 0px;
-	padding-top: 0; 
+body {
+    background-color: #eae5d2;
+    height: 100%;
+    padding: 0;
+    width: 100%;
 }
-
 .container-fluid {
     margin: 0;
-    padding: 0;
-    padding-bottom: 10px;
+    padding: 0 0 10px;
     width: 100%;
 }
-
-#header{
-    width: 100%;
-    padding: 0;
+#header {
+    background: #f9f9f9 none repeat scroll 0 0;
     margin: 0;
-    background: #f9f9f9;
+    padding: 0;
+    width: 100%;
 }
-
-#team-logo{
-	margin: 0;
-	width: 25%;
-	float: left;
-	top:0;
+#team-logo {
+    float: left;
+    margin: 0;
+    top: 0;
+    width: 25%;
 }
-
-.page-header{
-	background: #f9f9f9;
-    margin: 0px -40px 40px;
-    padding: 20px 40px;
-    padding-left: 40px; 
+.page-header {
+    background: #f9f9f9 none repeat scroll 0 0;
     border-top: 4px solid #ccc;
     color: #999;
+    margin: 0 -40px 40px;
+    overflow: auto;
+    padding: 20px 40px;
     text-transform: uppercase;
     width: 100%;
-    overflow: auto;
 }
-
-#headline{
-	padding-top: 20px;
+#headline {
+    padding-top: 20px;
 }
-
-.page-header h1{
-	line-height: 0.88rem;
+.page-header h1 {
     color: #000;
+    line-height: 0.88rem;
 }
-
-img{
-	max-width: 100%;
+img {
+    max-width: 100%;
 }
-
-form{
-    display: block;
-    position: relative;
-    margin: auto;
-    margin-top: 0; 
-    top: 0;
+form {
     bottom: 0;
-    left: 0;
-    right: 0;
+    display: block;
     height: 100px;
-    width: 500px;
+    left: 0;
+    margin: 0 auto auto;
+    position: relative;
+    right: 0;
     text-align: center;
+    top: 0;
+    width: 500px;
 }
-
-form input{
-    height: 10px;
-    border: none;
-    border-bottom: 2px solid #DDD;
+form input {
+    border: 2px solid #777777;
     border-radius: 25px;
+    font-size: 1em;
+    height: 10px;
     padding: 20px 35px;
     width: 120px;
-    font-size: 1em;
-    border: 2px solid #777777;
 }
-
-form input:focus{
-  width: 300px;
-  outline: 0;
+form input:focus {
+    outline: 0 none;
+    width: 300px;
 }
-
-button{
-  height: 50px;
-  border: none;
-  border-radius: 25px;
-  padding: 10px 25px;
-  background: #666;
-  color: #FFF;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  cursor: pointer;
-  opacity: 0;
+button {
+    background: #666 none repeat scroll 0 0;
+    border: medium none;
+    border-radius: 25px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 0.75em;
+    height: 50px;
+    opacity: 0;
+    padding: 10px 25px;
+    text-transform: uppercase;
 }
-
-form button:hover{
-  background: #222;
+form button:hover {
+    background: #222 none repeat scroll 0 0;
 }
-
-form input:focus ~ button{
-  display: inline-block;
+form input:focus ~ button {
+    display: inline-block;
     opacity: 1;
 }
-
-#preference-list{
-    margin: 0;
-    margin-right: 25px;
-    float: right;
-    display: inline-block;
-    padding: 8px;
+#preference-list {
     background-color: #fff;
     border-radius: 3px;
+    display: inline-block;
+    float: right;
+    margin: 0 25px 0 0;
+    padding: 8px;
     top: -100px;
 }
-
-h3{
+h3 {
+    color: #ed5565;
+    font-family: "Lato",sans-serif;
+    font-size: 17px;
     line-height: 1.5;
     margin: 0;
     padding: 0;
-    color: #ED5565;
-    font-family: 'Lato', sans-serif;
-    font-size: 17px;
 }
-
-.choice{
+.choice {
+    margin: 4px 0 0;
     position: relative;
-    margin: 4px 0px 0px 0px;
 }
-
-.drag-drop{
-    position: relative;
+.drag-drop {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
     background-color: #eaeaea;
-    margin: 0px 0px 1px 0px;
-    border: 1px solid #dadada;
-    border-width: 1px 1px 0px 1px;
-    color: #333;
-    padding: 2px;
-
+    border-color: #dadada;
+    border-image: none;
+    border-radius: 3px;
+    border-style: solid;
+    border-width: 1px 1px 0;
+    color: grey;
+    margin: 0 0 3px;
+    padding: 2px 5px 5px;
+    position: relative;
 }
-
-#outer-dropzone{
+#outer-dropzone {
     width: 100%;
+}
+#okButton {
+    text-align: center;
+}
+.btn {
+    background: #ed5a86 none repeat scroll 0 0;
+    border-radius: 8px;
+    color: #ffffff;
+    font-family: Arial;
+    font-size: 14px;
+    padding: 10px 25px;
+    text-decoration: none;
+}
+.btn:hover {
+    background: #ad395e none repeat scroll 0 0;
+    text-decoration: none;
 }

@@ -35,6 +35,10 @@
 			</div>
                     
       <div class="row">
+        <form class="searchbox">
+          <input type="text" placeholder="Search here...">
+          <button type="submit">Search</button>
+        </form>
         <div id="map" class="col-md-7"></div>
         
         <div id="preference-list" class="col-md-3 choices">
@@ -49,19 +53,18 @@
             <div id="gym-drop" class="draggable drag-drop"> Gym </div>
             <div id="crime-drop" class="draggable drag-drop"> Crime </div>
           <div id="outer-dropzone" class="dropzone">
-              <div id="barchart_material" style="width: 900px; height: 500px;"></div>
-              
-     	
+          </div>
+          <div id="okButton">
+            <input class="btn" type="button" value="OK" name="button" onclick="myFunction()">
           </div>
 
-<button id="submit" onclick="myFunction()"> Submit </button>
-
         </div>
-          
-      </div>      
+      </div> 
+      <div id="barchart_material" style="width: 900px; height: 500px;"></div> 
      <script type="text/javascript">
     function myFunction() {
     console.log(saveid);
+    console.log("clicked");
 }
 
      	// $('#submit').click(function(){
