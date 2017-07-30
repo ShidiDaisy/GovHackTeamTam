@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <script
+            src="http://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="gmaps.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBHfFPsmx6MXr2JmH4Kio_lwo2xv7c_ev8"></script>
+    <script src="jquery.loading.min.js"></script>
+
+    <!-- Include the CSS file to use the plugin default themes and loaders -->
+    <link href="jquery.loading.min.css" rel="stylesheet">
+    <meta charset="utf-8">
+    <title>Simple Polygon</title>
+    <style>
+        /* Always set the map height explicitly to define the size of the div
+         * element that contains the map. */
+        #map {
+            height: 100%;
+        }
+        /* Optional: Makes the sample page fill the window. */
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+    </style>
+</head>
+<body>
+<div id="map"></div>
+<script>
+
+    // This example creates a simple polygon representing the Bermuda Triangle.
+    var map;
+/*    function initMap() {
+        map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 5,
+            center: {lat: 24.886, lng: -70.268},
+            mapTypeId: 'terrain'
+        });
+    }*/
+    var mapObj = new GMaps({
+        el: '#map',
+        lat: -27.497,
+        lng: 153.009,
+        click: function(e) {
+            latitude = e.latLng.lat();
+            longtitude = e.latLng.lng();
+            $('#addlalng').text(e.latLng.lat()+','+e.latLng.lng());
+            if (clickMarker!=null){
+                mapObj.removeMarker(clickMarker);
+            }
+            clickMarker = mapObj.addMarker({
+                lat: e.latLng.lat(),
+                lng: e.latLng.lng(),
+                icon: "../resource/images/layout/click-marker.png",
+                infoWindow: {
+                    content: '<h5>Set an activity here</h5>',
+                    maxWidth: 100
+                }
+
+            });
+        }
+    });
+    function initTriangle(triangleCoords) {
+        // Define the LatLng coordinates for the polygon's path.
+
+        // Construct the polygon.
+        var bermudaTriangle = new google.maps.Polygon({
+            paths: triangleCoords,
+            strokeColor: '#FF0000',
+            strokeOpacity: 0.8,
+            strokeWeight: 2,
+            fillColor: '#FF0000',
+            fillOpacity: 0.35
+        });
+        bermudaTriangle.setMap(map);
+    }
+    $(function () {
+        $.ajax({
+            async:false,
+            url:"http://localhost/resplus/processSuburbCenter.php",
+            success:function (result) {
+                var objs = JSON.parse(result);
+                for(i=0;i<objs.length;i++){
+                    var obj = objs[i];
+                    polygon = mapObj.drawPolygon({
+                        paths: obj.polygon, // pre-defined polygon shape
+                        strokeColor: '#b40032',
+                        strokeOpacity: 1,
+                        strokeWeight: 1,
+                        fillColor: '#e9512a',
+                        fillOpacity: 0.2
+                    });
+                    mapObj.addMarker({
+                        lat: obj.center[0],
+                        lng: obj.center[1],
+                        title: obj.name,
+                        click: function(e) {
+                            alert('You clicked in this marker');
+                        }
+                    });
+                }
+
+            }
+        });
+    });
+</script>
+<!--<script async defer-->
+        <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCFQNktn0GLLkEdTe2rv3N3kQTP9DBqKtM&callback=initMap">-->
+<!--</script>-->
+</body>
+</html>
