@@ -3,6 +3,7 @@ html{
     width: 100%;
     margin: 0;
     padding: 0;
+    color: grey;
 }
 
 .row{
@@ -114,20 +115,6 @@ img{
 	max-width: 100%;
 }
 
-a {
-	-webkit-transition: all 150ms ease;
-	-moz-transition: all 150ms ease;
-	-ms-transition: all 150ms ease;
-	-o-transition: all 150ms ease;
-	transition: all 150ms ease; 
-	}
-    a:hover {
-        -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; /* IE 8 */
-        filter: alpha(opacity=50); /* IE7 */
-        opacity: 0.6;
-        text-decoration: none;
-    }
-
 form{
     display: block;
     position: relative;
@@ -155,20 +142,20 @@ form input{
 
 form input:focus{
   width: 300px;
-    outline: 0;
+  outline: 0;
 }
 
 button{
   height: 50px;
   border: none;
-    border-radius: 25px;
+  border-radius: 25px;
   padding: 10px 25px;
   background: #666;
   color: #FFF;
   text-transform: uppercase;
   font-size: 0.75em;
   cursor: pointer;
-    opacity: 0;
+  opacity: 0;
 }
 
 form button:hover{
@@ -187,6 +174,7 @@ form input:focus ~ button{
     padding: 8px;
     background-color: #fff;
     border-radius: 3px;
+    top: -100px;
 }
 
 h3{
