@@ -1,7 +1,12 @@
 <!DOCTYPE html>
 <html>
 	<head>
-		<!-- Latest compiled and minified CSS -->
+		<!-- Latest compiled and minified CSS  <form method="post" name="contact" action="#">
+            <p>
+                <input type="submit" name="Login" id="Login" value="Login"/>
+            </p>
+					
+                </form>-->
 		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
 		<!-- Optional theme -->
@@ -12,6 +17,8 @@
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
     <script src="js/interact.min.js"></script>
     <script src="js/javascript.js"></script>
+    <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  
 	</head>
 	<body>
 		<div class="container-fluid">
@@ -26,13 +33,12 @@
 					</div>
 				</div>
 			</div>
+                    
       <div class="row">
-          <form class="searchbox">
-            <input type="text" placeholder="Search here...">
-            <button type="submit">Search</button>
-          </form>
         <div id="map" class="col-md-7"></div>
-        <div id="preference-list" class="col-md-2 choices">
+        
+        <div id="preference-list" class="col-md-3 choices">
+            
           <h3><em class="glyphicon glyphicon-heart" aria-hidden="true"></em> What Are Your Concerns ?</h3>
             <div id="animal-drop" class="draggable drag-drop"> Animal Issue </div>
             <div id="hospital-drop" class="draggable drag-drop"> Hospital </div>
@@ -43,14 +49,36 @@
             <div id="gym-drop" class="draggable drag-drop"> Gym </div>
             <div id="crime-drop" class="draggable drag-drop"> Crime </div>
           <div id="outer-dropzone" class="dropzone">
+              <div id="barchart_material" style="width: 900px; height: 500px;"></div>
+              
+     	
           </div>
-          <div id="okButton">
-            <input type="button" name="button" class="btn" value="OK">
-          </div>
+
+<button id="submit" onclick="myFunction()"> Submit </button>
+
         </div>
           
       </div>      
-            
+     <script type="text/javascript">
+    function myFunction() {
+    console.log(saveid);
+}
+
+     	// $('#submit').click(function(){
+     	// 	console.log('123');
+     	// 	// $.ajax({
+     	// 	// 	url:'xxx.php',
+     	// 	// 	data:{
+     	// 	// 		name: JSON.stringify(array)
+     	// 	// 	}
+     	// 	// 	success:function(result){
+     	// 	// 		//todo 
+     	// 	// 	}
+     	// 	// });
+     	// });
+
+
+     </script>       
             
             
             

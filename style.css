@@ -5,10 +5,6 @@ html{
     padding: 0;
 }
 
-.row{
-    padding: 0;
-}
-
 #outer-dropzone {
     height: 200px;
 }
@@ -32,7 +28,7 @@ html{
 }
 
 .drop-target {
-    background-color: #ccc;
+    background-color: #29e;
     border-color: #fff;
     border-style: solid;
 }
@@ -53,9 +49,8 @@ html{
 }
 
 .drag-drop.can-drop {
-    color: #fff;
-    background-color: #ed5a86;
-    border-color: #ed5a86;
+    color: #000;
+    background-color: #4e4;
 }
 
 
@@ -128,57 +123,6 @@ a {
         text-decoration: none;
     }
 
-form{
-    display: block;
-    position: relative;
-    margin: auto;
-    margin-top: 0; 
-    top: 0;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 100px;
-    width: 500px;
-    text-align: center;
-}
-
-form input{
-    height: 10px;
-    border: none;
-    border-bottom: 2px solid #DDD;
-    border-radius: 25px;
-    padding: 20px 35px;
-    width: 120px;
-    font-size: 1em;
-    border: 2px solid #777777;
-}
-
-form input:focus{
-  width: 300px;
-    outline: 0;
-}
-
-button{
-  height: 50px;
-  border: none;
-    border-radius: 25px;
-  padding: 10px 25px;
-  background: #666;
-  color: #FFF;
-  text-transform: uppercase;
-  font-size: 0.75em;
-  cursor: pointer;
-    opacity: 0;
-}
-
-form button:hover{
-  background: #222;
-}
-
-form input:focus ~ button{
-  display: inline-block;
-    opacity: 1;
-}
 #preference-list{
     margin: 0;
     margin-right: 25px;
@@ -206,36 +150,14 @@ h3{
 .drag-drop{
     position: relative;
     background-color: #eaeaea;
-    margin: 0px 0px 3px 0px;
+    margin: 0px 0px 1px 0px;
     border: 1px solid #dadada;
     border-width: 1px 1px 0px 1px;
-    color: grey;
-    padding: 5px; 
-    padding-top: 2px;
-    border-radius: 3px;
+    color: #333;
+    padding: 2px;
+
 }
 
 #outer-dropzone{
     width: 100%;
-}
-
-#okButton{
-    text-align: center;
-}
-
-.btn {
-  -webkit-border-radius: 8;
-  -moz-border-radius: 8;
-  border-radius: 8px;
-  font-family: Arial;
-  color: #ffffff;
-  font-size: 14px;
-  background: #ed5a86;
-  padding: 10px 25px 10px 25px;
-  text-decoration: none;
-}
-
-.btn:hover {
-  background: #ad395e;
-  text-decoration: none;
 }
