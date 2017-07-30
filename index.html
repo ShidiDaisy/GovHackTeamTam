@@ -10,10 +10,12 @@
 		<link rel="stylesheet" type="text/css" href="style.css">
 		<!-- Latest compiled and minified JavaScript -->
 		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <script src="js/interact.min.js"></script>
+    <script src="js/javascript.js"></script>
 	</head>
 	<body>
 		<div class="container-fluid">
-			<div class="row-fluid">
+			<div class="row-fluid" id="header">
 				<div class = "page-header">
 					<div class="col-md-2">
 						<img src="src/govhack_logo_teamtam.png"></img>
@@ -24,9 +26,26 @@
 					</div>
 				</div>
 			</div>
-
-			<div id=map>
-			</div>
+      <div class="row">
+        <div id="map" class="col-md-7"></div>
+        <div id="preference-list" class="col-md-3">
+          <div id="yes-drop" class="draggable drag-drop"> #yes-drop </div>
+          <div id="outer-dropzone" class="dropzone">
+          </div>
+        </div>
+          
+      </div>      
+            
+            
+            
+            
+            
+            
+            
+            
+            
+            
+			
 		</div>
 	</body>
 </html>

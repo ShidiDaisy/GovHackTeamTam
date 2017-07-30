@@ -1,3 +1,53 @@
+#outer-dropzone {
+    height: 200px;
+}
+
+#inner-dropzone {
+    height: 100px;
+}
+
+.dropzone {
+    background-color: #ccc;
+    border: dashed 4px transparent;
+    border-radius: 4px;
+    margin: 10px auto 30px;
+    padding: 10px;
+    width: 80%;
+    transition: background-color 0.3s;
+}
+
+.drop-active {
+    border-color: #aaa;
+}
+
+.drop-target {
+    background-color: #29e;
+    border-color: #fff;
+    border-style: solid;
+}
+
+.drag-drop {
+    display: inline-block;
+    min-width: 40px;
+    padding: 2em 0.5em;
+    
+    color: #fff;
+    background-color: #29e;
+    border: solid 2px #fff;
+    
+    -webkit-transform: translate(0px, 0px);
+    transform: translate(0px, 0px);
+    
+    transition: background-color 0.3s;
+}
+
+.drag-drop.can-drop {
+    color: #000;
+    background-color: #4e4;
+}
+
+
+
 body{
 	width: 100%;
 	height: 100%;
@@ -11,14 +61,13 @@ body{
     padding: 0;
     padding-bottom: 10px;
     width: 100%;
-    background: #f9f9f9;
 }
 
-.row-fluid{
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	background: #f9f9f9;
+#header{
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    background: #f9f9f9;
 }
 
 #team-logo{
@@ -37,6 +86,7 @@ body{
     color: #999;
     text-transform: uppercase;
     width: 100%;
+    overflow: auto;
 }
 
 #headline{
@@ -66,3 +116,12 @@ a {
         text-decoration: none;
     }
 
+#preference-list{
+    margin: 0;
+    margin-right: : 50px;
+    float: right;
+}
+
+#outer-dropzone{
+    width: 100%;
+}
